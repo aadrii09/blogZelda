@@ -1,0 +1,194 @@
+/* Estructura para establecer un fondo, color del fondo y tipografia */
+html {
+  background-image: url("../img/pattern-triforce-2x.png");
+  background-color: rgb(4, 51, 48);
+  background-size: 2.5%;
+  font-family: Palatino Linotype, serif;
+}
+/* Quitando margenes en blanco del body*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Esto sieve para quitarle el subrrayado al h1 y cambiarle el color a las letras*/
+h1 a{
+  text-decoration: none;
+  color: #1B2E40;
+}
+
+/* Cabecera donde se establecen estilos como la imagen de fondo, color, opacidad, alineacion de texto... */
+header {
+  background-image: url("../img/heater_img.png");
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: rgb(127, 255, 212);
+  text-align: center;
+  padding: 10px;
+  opacity: 0.7;
+}
+/* Se le quita el estilo a la lista*/
+nav ul {
+  list-style: none;
+}
+/* para alinear el indice y categorias en un sola linea horizontal*/
+.liheader {
+  display: -webkit-inline-box;
+}
+
+/* Estilos para enlaces, como cambiar el color a la letra y quitarle el punto a la iquierda */
+p > a {
+  color: #1B2E40;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+/* Estilos para cada seccion como ajustar el tamaño de la seccion, las sombras o el color de fondo */
+section {
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: rgba(3, 37, 34, 0.4);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(109, 161, 165);
+}
+/*alineando texto de cada seccio*/
+section h2, section h4 {
+  text-align: center;
+}
+/*alineando texto de cada seccio*/
+section h2 {
+  margin-bottom: 20px;
+}
+/*cambiando tamaño de las imagenes*/
+.img {
+  width: 100%;
+}
+/*estableciendo estructura de cada article*/
+.content {
+  text-align: center;
+  display: table;
+}
+/*estructura de cada div dentro del article*/
+.fotoTexto {
+  display: table-cell; /*sirva para que cada div haga la funcion de una celda de una tabla*/
+  width: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+/* sirve para aunmentar la primera letra del texto*/
+.fotoTexto p::first-letter {
+  font-size: 180%;
+}
+
+/* para que la tabla ocupe el 100% de article */
+table {
+  width: 100%;
+}
+/*para alinear el texto de cada celda de la tabla*/
+table td {
+  text-align: center;
+}
+/*para cambiar el color de fondo de las filas impares*/
+table tbody tr:nth-child(odd) {
+  background-color: rgb(27, 46, 64);
+}
+/*para cambiar el color de fondo de las filas pares y el thead, que es la fila principal de la tabla*/
+table tbody tr:nth-child(even),
+table thead {
+  background-color: rgb(24, 63, 59);
+}
+
+/* cambiarndo tamaños del newsletter */
+#Newsletter {
+  margin-left: 80px;
+  width: 300px;
+}
+/* sirve para cambiar el color de la letra del formulario */
+.form {
+  color: #7FFFD4;
+}
+/* se logra que el imput sea transparente y solo se agrega un borde abajo y el resto se quitan*/
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+}
+/*se le agrega un borde y se cambia el color de la letra al boton de subscribirse*/
+input[name="Subscribe"] {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  color: #6DA1A5;
+}
+/*cuando se pasa el cursor por encima del boton, su fondo cambia de color y el cursor tambien cambia*/
+input[name="Subscribe"]:hover {
+  background-color: #7FFFD4;
+  cursor: url(../img/Master\ Sword.cur), auto;
+}
+
+/* ajustando el color, agregando imagen, dandole margen al  Footer */
+footer {
+  margin-top: 20px;
+  background-image: url("../img/footer_img.png");
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  opacity: 0.7;
+}
+/*ajustando los tamaños de los logos*/
+footer img {
+  width: 30px;
+}
+/* Animaciones */
+
+/*animacion para botones de inicio y categorias*/
+.catIni:active {
+  animation: cursorAnimacion 0.5s;
+}
+
+@keyframes cursorAnimacion {
+  0%, 100% {
+      cursor: url('../img/Master\ Sword.cur'), auto;
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(2);
+  }
+}
+
+/*animacion para cuando se picha en el boton*/
+input[name="Subscribe"]:active {
+  animation: cursorAnimacion1 0.3s;
+}
+
+@keyframes cursorAnimacion1 {
+  0%, 100% {
+      cursor: url('../img/Master\ Sword.cur'), auto;
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(2);
+  }
+}
+
+/* estilos para cuando se pasar el cursor por inicio y categorias*/
+.iniCat:hover {
+  cursor: url(../img/Master\ Sword.cur), auto;
+  color: goldenrod;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: gold;
+}
+/* sirve para cambiar el fondo y redondear las esquinas*/
+.logos{
+  background-color:  #A38F89;
+  border-radius: 30%;
+}

@@ -1,0 +1,132 @@
+/* Estructura para establecer un fondo, color del fondo y tipografia */
+html {
+  background-image: url("../img/pattern-triforce-2x.png");
+  background-color: #043330;
+  background-size: 2.5%;
+  font-family: Palatino Linotype, serif;
+}
+/* Quitando margenes en blanco del body*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Esto sieve para quitarle el subrrayado al h1 y cambiarle el color a las letras*/
+h1 a{
+  text-decoration: none;
+  color: #1B2E40;
+}
+
+/* Cabecera donde se establecen estilos como la imagen de fondo, color, opacidad, alineacion de texto... */
+header {
+  background-image: url("../img/heater_img.png");
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: aquamarine;
+  text-align: center;
+  padding: 10px;
+  opacity: 0.7;
+}
+/* Se le quita el estilo a la lista*/
+nav ul {
+  list-style: none;
+}
+/* para alinear el indice y categorias en un sola linea horizontal*/
+.liheader {
+  display: -webkit-inline-box;
+}
+/* Estilos para enlaces, como cambiar el color a la letra y quitarle el punto a la iquierda */
+p> a {
+  color: #1B2E40;
+  margin-right: 40px;
+  text-decoration: none;
+}
+/* alineando y cambiando el color del titulo*/
+h1 {
+  text-align: center;
+  color: aquamarine;
+}
+
+/* Estilos para añadir sombras o el color de fondo y la estructura de la seccion */
+.content {
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: table;
+}
+/*estructura de cada article dentro del section*/
+.fotoTexto {
+  display: table-cell;
+  width: 30%;
+  vertical-align: middle;
+  text-align: center;
+}
+/* se añade la imagen al cursor*/
+.img {
+  width: 500px;
+  cursor: url(../img/Master\ Sword.cur), auto;
+}
+/*animaciones para cuando se picha en alguna imagen de la seccion*/
+.img:active {
+  animation: animacionImagen 1.5s forwards;
+}
+
+@keyframes animacionImagen {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2) rotate(15deg);
+  }
+}
+
+ /* ajustando el color, agregando imagen, dandole margen al  Footer */ 
+footer {
+  margin-top: 20px;
+  background-image: url("../img/footer_img.png");
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  opacity: 0.7;
+}
+/*a ajustando tamaño de imagen*/
+footer img {
+  width: 30px;
+}
+
+ /* estilos para cuando se pasar el cursor por inicio y categorias*/ 
+.iniCat:hover {
+  cursor: url(../img/Master\ Sword.cur), auto;
+  color: goldenrod;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: gold;
+}
+
+/* animaciones para los botones inicio y categorias*/
+.catIni:active {
+  animation: cursorAnimacion 0.3s;
+}
+
+@keyframes cursorAnimacion {
+  0%, 100% {
+      cursor: url('../img/Master\ Sword.cur'), auto;
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(2);
+  }
+}
+/* sirve para cambiar el fondo y redondear las esquinas*/
+.logos{
+  background-color:  #A38F89;
+  border-radius: 30%;
+}
